@@ -1,0 +1,20 @@
+<?php
+
+-> ROUTES:
+	-> /g/{TOKEN_KEY} - GET_MESSAGE_MOD -> Auth with TOKEN_KEY, save the message
+	->/r [POST_DATA] - READ_ENRTY_MOD -> Send POST_DATA associative array which 'column' => 'filter' format to filter message or log
+				                         Return array or json as filtered content
+	->/admin - ADMIN_PANEL_MOD - admin page	
+
+-> DATABASE:
+	->message
+	->log
+	->user
+	->config
+	->bot
+		->id INT(4)			                         
+		->name VARCHAR(50)
+		->token VARCHAR(255)
+		->create_date INT(10) unix time stamp
+		->info VARCHAR(255)
+?>
